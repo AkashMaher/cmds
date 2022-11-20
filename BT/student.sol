@@ -46,6 +46,9 @@ contract student{
 		Students.push(stud(id,"abc","class","department"));
         _ids +=1;
 	}
+     receive() external payable {
+        // contract with fallback function requires receive() function
+    }
     
 
 }
