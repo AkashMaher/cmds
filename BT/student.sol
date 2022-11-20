@@ -41,6 +41,11 @@ contract student{
         return(_ids);
     }
 
+    fallback() external payable{
+        uint256 id = _ids;
+		Students.push(stud(id,"abc","class","department"));
+        _ids +=1;
+	}
     
 
 }
