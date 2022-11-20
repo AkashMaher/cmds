@@ -14,12 +14,9 @@ contract student{
     uint256 _ids;
 
 
-    function addStudent(string memory name, string memory class, string memory department) public {
-        
-        uint256 id = _ids;
+    function addStudent(uint256 id, string memory name, string memory class, string memory department) public {
         stud memory data = stud(id,name, class, department);
         Students.push(data);
-        _ids +=1;
     }
 
     function getStudent(uint256 _id) public view returns(uint256 id,string memory name, string memory class, string memory department){
