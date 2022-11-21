@@ -15,7 +15,7 @@ def fractionalKnapsack(items, weightLimit):
             weightLimit -= item.weight
             finalvalue += item.value
         else: # overflow
-            finalvalue += item.value * (weightLimit / item.weight)
+            finalvalue += (item.value * weightLimit) / item.weight
             break
     return finalvalue
 
